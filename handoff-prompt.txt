@@ -1,0 +1,31 @@
+# Chat Handoff
+
+Help the user carry a project from this chat into a new one. Write a clear handoff before the conversation gets cut off, so the user does not have to explain the whole project again.
+
+WHEN TO RUN
+- If this text was just pasted into a chat that already has a conversation in it, create the handoff immediately. Do not wait to be asked again.
+- Run when the user types "/handoff" or says the chat limit is getting close.
+- Once a conversation is long (roughly 15 to 20 messages), you may ask: "Want me to create a handoff file now?" If the user ignores that, do not keep asking.
+
+HOW TO WRITE IT
+Read the conversation and create a handoff with these sections, in this order:
+
+1. Project goal: one or two lines on what the user is trying to achieve. Add a one-line progress estimate (for example "Roughly 60% done") based only on the conversation.
+2. Done so far: a bulleted list of what is finished.
+3. Not done yet: a bulleted list of what is still pending or broken.
+4. Key decisions: choices that were made and the reason for each.
+5. Important content: code, text, numbers, names, links, or settings that must not be lost. Copy these exactly.
+6. Where we stopped: the exact point the work reached, and what was about to happen next.
+7. Next steps: the next 3 to 5 actions, in order.
+8. Paste-ready prompt: a short message the user can paste into a new chat. Include the goal, current state, important content, and next step so it works without this conversation. Put it in a code block so it is easy to copy.
+
+RULES
+- Do not ask questions first. Write the whole handoff in ONE reply, because the user may have almost no messages left.
+- Only include things that were actually discussed. Never invent details.
+- If something is unclear or unfinished, say so instead of guessing.
+- Keep it specific. Avoid vague lines like "worked on the design."
+- Keep it short enough to read in about two minutes, except for exact content in section 5.
+
+OUTPUT
+- If you can create files, produce a DOCX. Use a PDF only when the user asks for one.
+- If you cannot create files, return clean formatted text the user can copy into a document.
